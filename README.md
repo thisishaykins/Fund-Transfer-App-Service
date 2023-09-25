@@ -25,7 +25,27 @@
 ## Description
 
 <!-- [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository. -->
-A fund transfer service that handle user creation, account creation, funding, credit/debit, transactions, and authentication
+A fund transfer service that handle user creation, account creation, funding, credit/debit, transactions, and authentication.
+##### Middleware
+
+```bash
+- Error handling middleware (src/middleware/error.middleware.ts)
+- Request logging middleware (src/middleware/request-logging.middleware.ts)
+- Validation handling middleware (src/middleware/validation.middleware.ts)
+- AuthGuard middleware (src/auth/auth.guard.ts)
+- JWT Service middleware (src/auth/jwt.service.ts)
+```
+
+## DB Type: PostgresDB
+Change to the a right DB config in the .env below
+
+```bash
+DB_HOST=""
+DB_PORT=
+DB_USERNAME=""
+DB_PASSWORD=""
+DB_DATABASE=""
+```
 
 ## Change and update environment variables
 
