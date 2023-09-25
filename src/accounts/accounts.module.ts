@@ -9,8 +9,9 @@ import { UsersModule } from 'src/users/users.module'; // Import UsersModule here
 import { UsersService } from 'src/users/users.service';
 
 @Module({
-  imports: [UsersModule, TypeOrmModule.forFeature([Account]), UsersModule],
+  imports: [TypeOrmModule.forFeature([Account]), UsersModule],
   controllers: [AccountsController],
   providers: [AccountsService],
+  exports: [AccountsService], // Export AccountsService for use in other modules
 })
 export class AccountsModule {}

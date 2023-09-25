@@ -5,13 +5,17 @@ import { Transaction } from './entities/transaction.entity';
 import { TransactionsService } from './transactions.service';
 import { TransactionsController } from './transactions.controller';
 import { AccountsService } from '../accounts/accounts.service';
-import { UsersModule } from 'src/users/users.module';
-import { AccountsModule } from 'src/accounts/accounts.module';
+import { AccountsModule } from '../accounts/accounts.module';
+import { UsersModule } from '../users/users.module';
 
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Transaction])],
+  imports: [
+    TypeOrmModule.forFeature([Transaction]),
+    AccountsModule, // Add this line to import AccountsModule
+    UsersModule, // Add this line to import UsersModule
+  ],
   controllers: [TransactionsController],
-  providers: [TransactionsService, AccountsService],
+  providers: [TransactionsService],
 })
 export class TransactionsModule {}
