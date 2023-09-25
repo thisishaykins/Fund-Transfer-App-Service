@@ -64,12 +64,21 @@ export class TransactionsService {
     return transactions;
   }
 
-  findAll() {
-    return `This action returns all transactions`;
+  async findAll(): Promise<Transaction[]> {
+    const transactions = await this.transactionRepository.find();
+
+    return transactions;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} transaction`;
+  async findOne(id: number): Promise<Transaction> {
+    try {
+      return await this.transactionRepository.findOneOrFail({ 
+        where: [{ id: id,}],
+      });
+    } catch (error) {
+      throw new NotFoundException(`Transaction with #${id} is not found.`);
+    }
+    
   }
 
   update(id: number, updateTransactionDto: UpdateTransactionDto) {
