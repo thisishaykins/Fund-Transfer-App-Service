@@ -24,7 +24,18 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<!-- [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository. -->
+A fund transfer service that handle user creation, account creation, funding, credit/debit, transactions, and authentication
+
+## Change and update environment variables
+
+```bash
+# copy to .env
+$ cp .env.sample .env
+
+# update .env
+$ vim .env
+```
 
 ## Installation
 
@@ -64,10 +75,12 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - [Akinshola Samuel AKINDE](https://linkedin.com/in/akinshola)
+- Website - [https://akinshola.com](https://akinshola.com/)
+- Twitter - [@thisishaykins](https://twitter.com/thisishaykins)
+- GitHub - [@thisishaykins](https://github.com/thisishaykins)
 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+Nest Website - [https://nestjs.com](https://nestjs.com/)
